@@ -1,9 +1,9 @@
 import * as functions from "firebase-functions";
+import {FixedImageUrl} from "./FixedImageUrl";
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+//関数の複数ファイルへ分割
+//このように書くことでファイルの分割が行える。
+//CloudFunctionsではindexで全ての関数を読み込ませるようにしなければならない。
+module.exports = {
+    FixedImageUrl
+}
